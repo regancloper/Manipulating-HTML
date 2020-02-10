@@ -9,12 +9,13 @@ btn1.addEventListener("click", function () {
 
 // objective 2 - sends alert with text in form
 let btnSubmit = document.getElementById('btnSubmit');
-btnSubmit.addEventListener("click", function () {
+btnSubmit.addEventListener("click", function (e) {
+    e.preventDefault();
     let text = document.getElementById('text-input').value;
     alert(text);
 });
 
-// objective 3 - adds div and changes color when hovered over
+// objective 3 - changes color of div when hovered over
 let box = document.getElementById("color-box");
 box.addEventListener("mouseover", function (e) {
     e.target.style.backgroundColor = "mediumseagreen";
@@ -76,12 +77,4 @@ function assignRandomColor() {
 // generates a random number from 0 - 255
 function generateRandomNumber() {
     return (Math.floor(Math.random() * 256));
-}
-
-// adds a friend to the list
-function addFriend() {
-    for (let i = 0; i < list.length; i++) {
-        let item = list[i];
-
-    }
 }
